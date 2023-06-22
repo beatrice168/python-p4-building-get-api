@@ -27,7 +27,7 @@ class Game(db.Model,SerializerMixin):
 class Review(db.Model,SerializerMixin):
     __tablename__ = 'reviews'
     serialize_rules=('-game.reviews','-user.reviews',)
-    
+    #game.id,user.id
     id = db.Column(db.Integer, primary_key=True)
     score = db.Column(db.Integer)
     comment = db.Column(db.String)
